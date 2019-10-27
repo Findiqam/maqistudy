@@ -132,7 +132,8 @@ li a:hover {
 }
 
 .img:hover {
-    border: 1px solid #777;
+    border: 2px solid rgb(0, 0, 0);
+    opacity: 0.5;
 }
 
 .desc {
