@@ -154,6 +154,7 @@ hr {
 
 .borderbottom {
     border-bottom: 5px solid black;
+    padding-top: 50px;
 }
 
 #erweima {
@@ -185,5 +186,9 @@ hr {
 
 .biaoti2 {
     text-align: center;
+    line-height: 50px;
+}
+
+.lineh {
     line-height: 50px;
 }
