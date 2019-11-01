@@ -8,12 +8,14 @@
     <title>首页</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 </head>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script src="./bootstrap/js/bootstrap.min.js"></script>
 <style>
     body {
         padding-top: 60px;
         min-width: 1200px;
+        background-image: linear-gradient(to bottom right, rgb(221, 221, 221), rgb(255, 255, 255));
     }
     
     footer {
@@ -63,7 +65,16 @@
         line-height: 100px;
         font-size: 30px;
     }
-    
+    .content-board .content-header:hover{
+        font-size: 40px;
+    }
+    a{
+        color: black;
+    }
+    a:hover{
+        color: black;
+        text-decoration: none;
+    }
     .content-board .content-body {
         height: auto;
         min-height: 100px;
@@ -71,6 +82,7 @@
     }
     
     .servicebg {
+        padding-bottom: 50px;
         background-color: #D7D7D7;
     }
     
@@ -108,7 +120,57 @@
         height: auto;
         line-height: 30px;
     }
+    .thumbnail:hover{
+        border: 2px solid black;
+    }
     
+    #anli img{
+        width: 100%;
+        background-color: #D7D7D7;
+    }
+    .anlirow{
+        position: relative;
+        width: auto;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+    }
+    .anlirow:after {
+        content:""; 
+        display: block; 
+        clear:both; 
+    }
+    .anlicol{
+        position: relative;
+        float: left;
+        width: 600px;
+        height: 600px;
+    }
+    .anlicol-header{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 25px;
+    }
+    .anlicol-body{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        text-align: left;
+        line-height: 50px;
+        font-size: 18px;
+        padding: 25px;
+    }
+    .anlicol-footer{
+        position: relative;
+        width: 100%;
+        height: 200px;
+        text-align: left;
+        line-height: 50px;
+        font-size: 18px;
+        padding: 25px;
+    }
     .mpzero {
         margin: 0px;
         padding: 0px;
@@ -126,6 +188,7 @@
                     <li><a href="#">首页</a></li>
                     <li><a href="#">新闻</a></li>
                     <li><a href="#">关于我们</a></li>
+                    <li><a href="./danmu.html">弹幕墙</a></li>
                 </ul>
             </div>
         </div>
@@ -167,67 +230,150 @@
     <div class="width1200">
         <div class="content-board">
             <div class="content-header">
-                服务范围
+                 <a href="">服务范围</a>
             </div>
-            <div class="content-body servicebg"></div>
-        </div>
-        <div class="content-board">
-            <div class="content-header">
-                案例介绍
-            </div>
-            <div class="content-body"></div>
-        </div>
-        <div class="content-board">
-            <div class="content-header">
-                新闻中心
-            </div>
-            <div class="content-body"></div>
-        </div>
-
-        <!-- <h1>页面列表</h1>
-        <ul>
-            <li><a href="./danmu.html">danmu.html</a></li>
-            <li><a href="./portfolio.html">portfolio.html</a></li>
-            <li><a href="./coffee-div.html">coffee-div.html</a></li>
-            <li><a href="./coffee.html">coffee.html</a></li>
-            <li><a href="./b.html">b.html</a></li>
-            <li><a href="./a.html">a.html</a></li>
-        </ul> -->
-
-    </div>
-    <footer>
-        <div class="width1200">
-            <div class="footer-message">
+            <div class="content-body servicebg">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="mythumbnail">
-                                <img src="./img/定位.png" alt="位置">
+                                <a href="#"><img src="./img/html.png" alt="html课程">
+                                    <div class="mycaption">
+                                        <h3>html课程</h3>
+                                    </div></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="mythumbnail">
+                                <a href="#"><img src="./img/css.png" alt="css课程">
                                 <div class="mycaption">
+                                    <h3>css课程</h3>
+                                </div></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="mythumbnail">
+                                <a href="#"><img src="./img/js.png" alt="js课程">
+                                <div class="mycaption">
+                                    <h3>js课程</h3>
+                                </div></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="mythumbnail">
+                                <a href="#"><img src="./img/bootstrap.png" alt="bootstrap课程">
+                                <div class="mycaption ">
+                                    <h3>bootstrap课程</h3>
+                                </div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-board ">
+            <div class="content-header ">
+                <a href="">案例介绍</a>
+            </div>
+            <div class="content-body " id="anli">
+                <!-- 案例介绍内容 -->
+                <div class="anlirow">
+                    <div class="anlicol">
+                        <img src="./img/qyz.png" alt="qyz.png">
+                    </div>
+                    <div class="anlicol">
+                        <div class="anlicol-header">企业站</div>
+                        <div class="anlicol-body"><p>这是我实训期间做的第一个企业站</p></div>
+                        <div class="anlicol-footer">2019年11月1日</div>
+                    </div>
+                </div>
+                <br>
+                <div class="anlirow">
+                    <div class="anlicol">
+                            <div class="anlicol-header">弹幕墙</div>
+                            <div class="anlicol-body">这是我实训期间做的第一个弹幕墙</div>
+                            <div class="anlicol-footer">2019年11月1日</div>
+                    </div>
+                    <div class="anlicol"><img src="./img/弹幕.png" alt="qyz.png"></div>
+                </div>
+                <br>
+                <div class="anlirow">
+                    <div class="anlicol">
+                        <img src="./img/portfolio.png" alt="qyz.png">
+                    </div>
+                    <div class="anlicol">
+                            <div class="anlicol-header">个人主页</div>
+                            <div class="anlicol-body">这是我实训期间做的第一个个人主页</div>
+                            <div class="anlicol-footer">2019年11月1日</div>
+                    </div>
+                </div>
+                <br>
+                <div class="anlirow">
+                    <div class="anlicol">
+                            <div class="anlicol-header">咖啡店</div>
+                            <div class="anlicol-body">这是我实训期间做的第一个咖啡店</div>
+                            <div class="anlicol-footer">2019年11月1日</div>
+                    </div>
+                    <div class="anlicol"><img src="./img/coffee-div.png" alt="qyz.png"></div>
+                </div>
+        
+            </div>
+        </div>
+        <div class="content-board ">
+            <div class="content-header ">
+                <a href="">新闻动态</a>
+            </div>
+            <div class="content-body">
+                <div class="row " id="news">
+                   <!-- 新闻动态内容 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- <h1>页面列表</h1>
+        <ul>
+            <li><a href="./danmu.html ">danmu.html</a></li>
+            <li><a href="./portfolio.html ">portfolio.html</a></li>
+            <li><a href="./coffee-div.html ">coffee-div.html</a></li>
+            <li><a href="./coffee.html ">coffee.html</a></li>
+            <li><a href="./b.html ">b.html</a></li>
+            <li><a href="./a.html ">a.html</a></li>
+        </ul> -->
+
+    </div>
+    <footer>
+        <div class="width1200 ">
+            <div class="footer-message ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-xs-3 ">
+                            <div class="mythumbnail ">
+                                <img src="./img/定位.png " alt="位置 ">
+                                <div class="mycaption ">
                                     福州市闽侯县闽江学院
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-3">
-                            <div class="mythumbnail">
-                                <img src="./img/邮件.png" alt="邮箱">
-                                <div class="mycaption">
+                        <div class="col-xs-3 ">
+                            <div class="mythumbnail ">
+                                <img src="./img/邮件.png " alt="邮箱 ">
+                                <div class="mycaption ">
                                     1141788876@qq.com
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-3">
-                            <div class="mythumbnail">
-                                <img src="./img/电话.png" alt="电话">
-                                <div class="mycaption">
+                        <div class="col-xs-3 ">
+                            <div class="mythumbnail ">
+                                <img src="./img/电话.png " alt="电话 ">
+                                <div class="mycaption ">
                                     18805022894
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-3">
-                            <div class="mythumbnail">
-                                <img src="./img/二维码.png" alt="二维码" ">
-                                <div class="mycaption ">
+                        <div class="col-xs-3 ">
+                            <div class="mythumbnail ">
+                                <img src="./img/二维码.png " alt="二维码 " ">
+                                <div class=" mycaption ">
                                     扫一扫，加入好多鱼联盟
                                 </div>
                             </div>
@@ -235,13 +381,33 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-low ">
+            <div class=" footer-low ">
                 版权所有@好多鱼
             </div>
         </div>
-    </footer>
+        </footer>
 </body>
 <script>
-</script>
+    $(document).ready(function () {
+        function getnews() {
+            axios.get('http://mock-api.com/Gzq9QLzW.mock/index-news')
+                .then(function (response) {
+                    var ns;
+                    var nstitle;
+                    var nscontent;
+                    var nsimg;
+                    var news=" ";
+                    for (var n in response.data) {
+                        ns = response.data[n];
+                        nstitle = ns.title;
+                        nscontent = ns.content;
+                        nsimg = ns.img;
+                        news=news+"<div class=\"col-xs-3 \"><a href=\"# \"><div class=\"thumbnail \"><img src=\"./img/"+ns.img+" \" alt=\""+ns.img+" \"><div class=\"caption \"><h3>"+ns.title+"</h3><p>"+ns.content+"</p></div> </div></a></div> ";
+                        } 
+                        $(" #news ").append(news);
+                }).catch(function (error) { $(" #news ").html(" <h4>新闻获取失败...</h4>"); });
+        }; getnews();
+    });
+                        </script>
 
 </html>
