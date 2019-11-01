@@ -13,21 +13,29 @@
 <style>
     body {
         padding-top: 60px;
+        min-width: 1200px;
     }
     
     footer {
+        min-width: 1200px;
+        width: 100%;
+        position: relative;
         height: 400px;
         background-color: #D7D7D7;
+        margin: auto;
     }
     
     footer div {
+        position: relative;
         height: 100%;
     }
     
     .width1200 {
+        position: relative;
         width: 1200px;
         padding: 0px;
         margin: auto;
+        min-width: 1200px;
     }
     
     .navbar-header img {
@@ -44,11 +52,61 @@
     
     .content-board {
         width: 100%;
-        min-height: 100px;
+        height: auto;
+        min-height: 200px;
     }
     
     .content-board .content-header {
+        height: auto;
         width: 100%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+    }
+    
+    .content-board .content-body {
+        height: auto;
+        min-height: 100px;
+        width: 100%;
+    }
+    
+    .servicebg {
+        background-color: #D7D7D7;
+    }
+    
+    .footer-message {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        border-bottom: 2px solid black;
+    }
+    
+    .footer-low {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+    }
+    
+    .mythumbnail {
+        width: 100%;
+        height: 80%;
+        position: relative;
+        margin: auto;
+        margin-top: 20%;
+        text-align: center;
+    }
+    
+    .mythumbnail img {
+        width: 60%;
+    }
+    
+    .mycaption {
+        position: relative;
+        text-align: center;
+        height: auto;
+        line-height: 30px;
     }
     
     .mpzero {
@@ -107,9 +165,26 @@
     </div>
 
     <div class="width1200">
+        <div class="content-board">
+            <div class="content-header">
+                服务范围
+            </div>
+            <div class="content-body servicebg"></div>
+        </div>
+        <div class="content-board">
+            <div class="content-header">
+                案例介绍
+            </div>
+            <div class="content-body"></div>
+        </div>
+        <div class="content-board">
+            <div class="content-header">
+                新闻中心
+            </div>
+            <div class="content-body"></div>
+        </div>
 
-
-        <h1>页面列表</h1>
+        <!-- <h1>页面列表</h1>
         <ul>
             <li><a href="./danmu.html">danmu.html</a></li>
             <li><a href="./portfolio.html">portfolio.html</a></li>
@@ -117,11 +192,53 @@
             <li><a href="./coffee.html">coffee.html</a></li>
             <li><a href="./b.html">b.html</a></li>
             <li><a href="./a.html">a.html</a></li>
-        </ul>
+        </ul> -->
 
     </div>
     <footer>
-        <div class="width1200">jiaobu</div>
+        <div class="width1200">
+            <div class="footer-message">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="mythumbnail">
+                                <img src="./img/定位.png" alt="位置">
+                                <div class="mycaption">
+                                    福州市闽侯县闽江学院
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="mythumbnail">
+                                <img src="./img/邮件.png" alt="邮箱">
+                                <div class="mycaption">
+                                    1141788876@qq.com
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="mythumbnail">
+                                <img src="./img/电话.png" alt="电话">
+                                <div class="mycaption">
+                                    18805022894
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="mythumbnail">
+                                <img src="./img/二维码.png" alt="二维码" ">
+                                <div class="mycaption ">
+                                    扫一扫，加入好多鱼联盟
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-low ">
+                版权所有@好多鱼
+            </div>
+        </div>
     </footer>
 </body>
 <script>
