@@ -389,8 +389,11 @@
 </body>
 <script>
     $(document).ready(function () {
+        $('#myCarousel').carousel({
+    interval: 2000
+})
         function getnews() {
-            axios.get('http://mock-api.com/Gzq9QLzW.mock/index-news')
+            axios.get('./data/qyz/indexnews')
                 .then(function (response) {
                     var ns;
                     var nstitle;
