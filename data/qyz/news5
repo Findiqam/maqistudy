@@ -18,11 +18,4 @@
        "cretime":"2019-11-02",
        "content": "这是我做的第一个div布局的咖啡店。",
        "img": "coffee-div.png"
-    },  
-    {
-       "id":"4",
-       "title": "咖啡店（table布局）",
-       "cretime":"2019-11-02",
-       "content": "这是我做的table布局的咖啡店。",
-       "img": "coffee-table.png"
     }]

@@ -7,45 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./qyzmain.css">
 </head>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./js/jquery-3.4.1.min.js"></script>
 <script src="./bootstrap/js/bootstrap.min.js"></script>
 <style>
-    body {
-        padding-top: 60px;
-        min-width: 1200px;
-        background-image: linear-gradient(to bottom right, rgb(221, 221, 221), rgb(255, 255, 255));
-    }
-    
-    footer {
-        min-width: 1200px;
-        width: 100%;
-        position: relative;
-        height: 400px;
-        background-color: #D7D7D7;
-        margin: auto;
-    }
-    
-    footer div {
-        position: relative;
-        height: 100%;
-    }
-    
-    .width1200 {
-        position: relative;
-        width: 1200px;
-        padding: 0px;
-        margin: auto;
-        min-width: 1200px;
-    }
-    
-    .navbar-header img {
-        float: left;
-        height: 50px;
-        width: 50px;
-    }
-    
     .carousel-size {
         margin: auto;
         width: 1500px;
@@ -68,13 +35,7 @@
     .content-board .content-header:hover{
         font-size: 40px;
     }
-    a{
-        color: black;
-    }
-    a:hover{
-        color: black;
-        text-decoration: none;
-    }
+
     .content-board .content-body {
         height: auto;
         min-height: 100px;
@@ -86,43 +47,7 @@
         background-color: #D7D7D7;
     }
     
-    .footer-message {
-        position: relative;
-        width: 100%;
-        height: 320px;
-        border-bottom: 2px solid black;
-    }
     
-    .footer-low {
-        position: relative;
-        width: 100%;
-        height: 80px;
-        line-height: 80px;
-        text-align: center;
-    }
-    
-    .mythumbnail {
-        width: 100%;
-        height: 80%;
-        position: relative;
-        margin: auto;
-        margin-top: 20%;
-        text-align: center;
-    }
-    
-    .mythumbnail img {
-        width: 60%;
-    }
-    
-    .mycaption {
-        position: relative;
-        text-align: center;
-        height: auto;
-        line-height: 30px;
-    }
-    .thumbnail:hover{
-        border: 2px solid black;
-    }
     
     #anli img{
         width: 100%;
@@ -132,7 +57,8 @@
         position: relative;
         width: auto;
         height: auto;
-        background-color: rgb(255, 255, 255);
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
     }
     .anlirow:after {
         content:""; 
@@ -185,9 +111,9 @@
                 <a class="navbar-brand" href="#">好多鱼联盟</a></div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">新闻</a></li>
-                    <li><a href="#">关于我们</a></li>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./news.html">新闻</a></li>
+                    <li><a href="./about.html">关于我们</a></li>
                     <li><a href="./danmu.html">弹幕墙</a></li>
                 </ul>
             </div>
@@ -230,7 +156,7 @@
     <div class="width1200">
         <div class="content-board">
             <div class="content-header">
-                 <a href="">服务范围</a>
+                 <a href="#">服务范围</a>
             </div>
             <div class="content-body servicebg">
                 <div class="container-fluid">
@@ -273,13 +199,13 @@
         </div>
         <div class="content-board ">
             <div class="content-header ">
-                <a href="">案例介绍</a>
+                <a href="#">案例介绍</a>
             </div>
             <div class="content-body " id="anli">
                 <!-- 案例介绍内容 -->
                 <div class="anlirow">
                     <div class="anlicol">
-                        <img src="./img/qyz.png" alt="qyz.png">
+                        <a href="#"><img src="./img/qyz.png" alt="qyz.png"></a>
                     </div>
                     <div class="anlicol">
                         <div class="anlicol-header">企业站</div>
@@ -290,16 +216,19 @@
                 <br>
                 <div class="anlirow">
                     <div class="anlicol">
-                            <div class="anlicol-header">弹幕墙</div>
+                            <div class="anlicol-header">弹幕墙
+                            </div>
                             <div class="anlicol-body">这是我实训期间做的第一个弹幕墙</div>
                             <div class="anlicol-footer">2019年11月1日</div>
                     </div>
-                    <div class="anlicol"><img src="./img/弹幕.png" alt="qyz.png"></div>
+                    <div class="anlicol">
+                        <a href="./danmu.html"><img src="./img/弹幕.png" alt="qyz.png"></a>
+                    </div>
                 </div>
                 <br>
                 <div class="anlirow">
                     <div class="anlicol">
-                        <img src="./img/portfolio.png" alt="qyz.png">
+                        <a href="./portfolio.html"><img src="./img/portfolio.png" alt="qyz.png"></a>
                     </div>
                     <div class="anlicol">
                             <div class="anlicol-header">个人主页</div>
@@ -314,14 +243,16 @@
                             <div class="anlicol-body">这是我实训期间做的第一个咖啡店</div>
                             <div class="anlicol-footer">2019年11月1日</div>
                     </div>
-                    <div class="anlicol"><img src="./img/coffee-div.png" alt="qyz.png"></div>
+                    <div class="anlicol">
+                        <a href="./coffee-div.html"><img src="./img/coffee-div.png" alt="qyz.png"></a>
+                    </div>
                 </div>
         
             </div>
         </div>
         <div class="content-board ">
             <div class="content-header ">
-                <a href="">新闻动态</a>
+                <a href="./news.html">新闻动态</a>
             </div>
             <div class="content-body">
                 <div class="row " id="news">
@@ -391,25 +322,20 @@
     $(document).ready(function () {
         $('#myCarousel').carousel({
     interval: 2000
-})
+});
         function getnews() {
             axios.get('./data/qyz/indexnews')
                 .then(function (response) {
                     var ns;
-                    var nstitle;
-                    var nscontent;
-                    var nsimg;
                     var news=" ";
                     for (var n in response.data) {
                         ns = response.data[n];
-                        nstitle = ns.title;
-                        nscontent = ns.content;
-                        nsimg = ns.img;
-                        news=news+"<div class=\"col-xs-3 \"><a href=\"# \"><div class=\"thumbnail \"><img src=\"./img/"+ns.img+" \" alt=\""+ns.img+" \"><div class=\"caption \"><h3>"+ns.title+"</h3><p>"+ns.content+"</p></div> </div></a></div> ";
+                        news=news+"<div class=\"col-xs-3 \"><a href=\"./news-detail.html?id="+ns.id+" \"><div class=\"thumbnail \"><img src=\"./img/"+ns.img+" \" alt=\""+ns.img+" \"><div class=\"caption \"><h3>"+ns.title+"</h3><p>"+ns.cretime+"</p><p>"+ns.content+"</p></div> </div></a></div> ";
                         } 
                         $(" #news ").append(news);
                 }).catch(function (error) { $(" #news ").html(" <h4>新闻获取失败...</h4>"); });
-        }; getnews();
+        }; 
+        getnews();
     });
                         </script>
 
