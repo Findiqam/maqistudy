@@ -152,7 +152,7 @@ hr{
 </body>
 <script>
 $(document).ready(function(){
-    var id = window.location.href.split("?")[1].split("=")[1];
+    var newsid = window.location.href.split("?")[1].split("=")[1];
     function getcontent(id){
         axios.get('./data/qyz/id'+id)
                 .then(function (response) {
@@ -166,7 +166,7 @@ $(document).ready(function(){
                     
                 });
     }
-    getcontent(id);
+    getcontent(newsid);
 });
 </script>
 </html>
